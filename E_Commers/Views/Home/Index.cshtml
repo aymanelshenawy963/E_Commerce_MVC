@@ -1,0 +1,32 @@
+﻿@section Scripts
+{
+    <partial name="_NotifationPartial.cshtml"></partial>
+}
+
+<div class="row">
+    @{
+        foreach (var items in Model)
+        {
+            <div class="col-4 mb-3 d-flex">
+                <div class="card" style="width: 18rem;">
+                    <a href="Home/Details?productId=@items.Id"><img src="~/images/@items.ImgUrl" class="card-img-top" alt="..."> </a>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-9">
+                                @items.Name
+                            </div>
+                            <div class="col-3">
+                                <span class="badge text-bg-success">Rate / 5</span>
+                            </div>
+                        </div>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <p class="card-text">Price: <span class="badge text-bg-warning">@items.Price</span></p>
+                        <a href="/Home/Details?productId=@items.Id" class="btn btn-primary">More Details...</a>
+
+                    </div>
+                </div>
+            </div>
+        }
+    }
+
+</div>

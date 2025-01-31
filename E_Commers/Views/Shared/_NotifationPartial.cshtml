@@ -1,0 +1,9 @@
+﻿@if (TempData["Success"] != null)
+{
+    <script>
+           toastr.success('@TempData["Success"]')
+        @*    // toastr.success('@ViewBag.name')
+       // toastr.success('@Context.Request.Cookies["Success"]'); *@
+
+    </script>
+}
